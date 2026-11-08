@@ -1,0 +1,91 @@
+:root {
+  --text: #1f1f1f;
+  --muted: #6b6b6b;
+  --link: #1a4d8f;
+  --rule: #e4e4e4;
+  --bg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e6e6e6;
+    --muted: #9a9a9a;
+    --link: #8ab4f8;
+    --rule: #333333;
+    --bg: #161616;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 18px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+}
+
+header { margin-bottom: 2rem; }
+
+.photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 0.3rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 2.5rem 0 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.role { color: var(--muted); margin: 0; }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  margin: 1.5rem 0 0;
+  font-size: 0.95rem;
+}
+
+.muted { color: var(--muted); font-size: 0.95rem; }
+
+.pubs { padding-left: 1.25rem; }
+.pubs li { margin-bottom: 1rem; }
+.pubs .title { font-weight: 500; }
+.pubs .authors, .pubs .venue { color: var(--muted); font-size: 0.92rem; }
+
+footer {
+  margin-top: 3rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+  html { font-size: 17px; }
+  main { padding-top: 2.5rem; }
+}
