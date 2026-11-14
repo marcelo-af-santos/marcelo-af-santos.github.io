@@ -13,3 +13,5 @@ Plain HTML and CSS, no build step:
 To add a paper, copy one of the `<li>` entries in the Publications list in `research.html`.
 
 To add a tab, copy `research.html` to a new file, then add a link to it in the `<nav class="tabs">` block of every page. On each page, put `aria-current="page"` on the link to that page itself.
+
+After editing `style.css`, bump the `?v=` number in the `<link rel="stylesheet" href="style.css?v=…">` line of every page, so visitors' browsers fetch the new stylesheet instead of a cached copy.
